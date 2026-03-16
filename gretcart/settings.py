@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -138,9 +140,15 @@ MESSAGE_TAGS = {
 }
 
 # smtp configratio
-
-EMAIL_HOST = 'stmp.gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
+<<<<<<< HEAD
 EMAIL_HOST_USER = 'rushikeshlale@1gmail.com'
 EMAIL_HOST_PASSWORD =''
 EMAIL_USE_TLS = True
+=======
+EMAIL_HOST_USER = 'rushikeshlale1@gmail.com'
+EMAIL_HOST_PASSWORD ='Lale@2885'
+EMAIL_USE_TLS = True
+>>>>>>> c03656a (complate project)
